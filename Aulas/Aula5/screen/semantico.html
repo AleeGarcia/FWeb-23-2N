@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "nav nav nav"
+                "header header aside"
+                "section1 section2 aside"
+                "footer footer footer";
+            grid-template-columns: 2fr 2fr 1fr;
+            grid-template-rows: auto 1fr 1fr auto;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #ba7acf;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #5f975f;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #b16f6f;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .section1 {
+            grid-area: section1;
+            background-color: #8972b5;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .section2 {
+            grid-area: section2;
+            background-color: #9a7ece;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #baab72;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>NAV</nav>
+    <header>HEADER</header>
+    <aside>ASIDE</aside>
+    <section class="section1">SECTION 1</section>
+    <section class="section2">SECTION 2</section>
+    <footer>FOOTER</footer>
+</body>
+
+<!-- we love grid templates S2 -->
+ 
+</html>

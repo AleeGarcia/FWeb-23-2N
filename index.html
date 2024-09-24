@@ -6,33 +6,96 @@
     <title>Welcome Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2a2d7f;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         h1 {
-            text-align: center;
-            color: rgb(6, 6, 6);
-            margin-top: 20px;
+            font-size: 24px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        h1 img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        .menu-opcoes {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-opcoes li {
+            display: inline;
+        }
+
+        .menu-opcoes a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-opcoes a:hover {
+            background-color: #929292;
+            border-radius: 5px;
         }
 
         p {
-            font-size: 20px;
-            color: rgb(34, 80, 120);
-            line-height: 1.6;
+            font-size: 18px;
+            color: #9b9b9b;
             text-align: center;
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Bem Vindo ao Website</h1>
+
+    <header>
+        <div class="container">
+            <h1><img src="" alt="Logo">Alessandro Garcias Site!</h1>
+            <nav>
+                <ol class="menu-opcoes">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
     <p>
-        Apenas um visual simples com css e outras estilizações no programa de html, front end web Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis maxime incidunt totam? Sint inventore omnis voluptate, expedita qui voluptatibus consequuntur voluptas vero, ex nostrum maiores eveniet porro unde. Quidem?
+        Bem-vindo ao nosso site!
     </p>
+
 </body>
 </html>
