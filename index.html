@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>Teste de Painel</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center; /* Centraliza o conteúdo do main */
         }
 
         header {
@@ -70,32 +81,159 @@
         p {
             font-size: 18px;
             color: #9b9b9b;
-            text-align: center;
             max-width: 700px;
             margin: 40px auto;
             padding: 0 20px;
         }
+
+        section#destaques {
+            background-color: #fff;
+            padding: 40px 0;
+        }
+
+        .paineis {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .painel {
+            background-color: #2a2d7f;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .painel:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2a2d7f;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            width: 250px;
+        }
+
+        .search-button {
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .search-button img {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
             <h1><img src="" alt="Logo">Alessandro Garcias Site!</h1>
             <nav>
-                <ol class="menu-opcoes">
+                <ul class="menu-opcoes">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Contato</a></li>
-                </ol>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <p>
-        Bem-vindo ao nosso site!
-    </p>
+    <main>
+        <section id="destaques">
+            <h2>Destaques</h2>
+            <div class="paineis">
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+                <div class="painel">
+                    <h3>Teste</h3>
+                    <p>Teste</p>
+                </div>
+            </div>
+        </section>
 
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" class="search-input" placeholder="Pesquisar..." required>
+                <button type="submit" class="search-button">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" alt="Buscar">
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            
+        </div>
+    </footer>
 </body>
 </html>
