@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Lil Peep - Jornal</title>
+  
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    
+    body {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+      color: #333;
+    }
+    .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .header-image {
+      max-width: 300px;
+      height: auto;
+      margin: 20px 0;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+    }
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+    .purple-bar {
+      background-color: #78598d;
+      height: 80px;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      margin: 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .review-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .review-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .rating {
+      color: #d32f2f;
+      font-size: 20px;
+    }
+    .author-info {
+      font-size: 14px;
+      color: #777;
+      margin-top: 10px;
+    }
+    .author-info span {
+      color: #d32f2f;
+    }
+    .info-text {
+      font-size: 18px;
+      text-align: justify;
+      padding: 20px;
+      background-color: #ffffff;
+      margin: 20px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .store-item {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 30px;
+      text-align: center;
+      overflow: hidden;
+      transition: background-color 0.3s;
+    }
+    .store-item img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .store-item:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .product-info {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .card-img-top {
+    height: 300px; 
+    object-fit: cover; 
+    width: 100%; 
+  }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 80px 80px;
+      text-align: center;
+      width: 100%
+    }
+    .footer h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .footer p {
+      font-size: 16px;
+      margin: 10px 0 20px;
+    }
+    .footer .highlight {
+      color: #ff0000;
+      font-weight: bold;
+    }
+    .footer a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    .footer .bottom-links {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .footer .bottom-links a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .footer .bottom-links a:hover {
+      color: #fff;
+    }
+    .footer small {
+      display: block;
+      color: #666;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+    @media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1940px;
+    }}
+  </style>
+</head>
+<body>
+  
+  <header>
+    <img class="header-image" src="https://lilpeep.com/cdn/shop/files/Lil_Peep_Logo_shadow2_380x.png?v=1686403181" alt="Lil Peep Logo">
+  </header>
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/2015-10-16_02.49.48-2.jpg?v=1669752185" alt="First slide">
+        <div class="carousel-caption">
+          <h5>Live Forever</h5>
+          <p>"Live Forever is a celebration of life and the quest for lasting meaning..."</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/Lil_Peep_teen_romance_2_copy.jpg?v=1718416279" alt="Second slide">
+        <div class="carousel-caption">
+          <h5>Teen Romance</h5>
+          <p>"Teen Romance is a nostalgic reflection on young love..."</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/Screenshot_2023-08-11_at_5.29.01_PM.png?v=1691789516" alt="Third slide">
+        <div class="carousel-caption">
+          <h5>Diamonds</h5>
+          <p>"Diamonds highlights Lil Peep's struggle with fame and emotional pain..."</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Voltar</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+
+  <div class="purple-bar"></div>
+
+
+  <div class="container">
+    <div class="breadcrumb">REVIEWS › ALBUM REVIEWS</div>
+    <h1 class="review-title">Lil Peep – ‘Everybody’s Everything’ review: a gentle reminder of what the late rapper could have achieved</h1>
+    <p class="review-subtitle">Last year's first posthumous release expanded the pioneering musician's legacy...</p>
+
+
+    <div class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <p class="author-info">By <span>Dhruva Balram</span> | 15th November 2019</p>
+
+    
+    <div class="info-text">
+      <p>Welcome to the official website of the family of Gustav Elijah Ahr, also known as Lil Peep.</p>
+    </div>
+
+    <div class="career-review">
+      <h2 class="career-review-title">Lil Peep: Tracing the Impact of an Unforgettable Legacy</h2>
+      <p class="career-review-text">
+        Lil Peep, born Gustav Elijah Ahr, was more than just an artist; he was a voice for the misunderstood and a symbol of a generation’s struggles with mental health, self-identity, and belonging. Blending elements of hip-hop, emo, punk, and rock, Lil Peep created a unique sound that resonated deeply with fans across the world. In a music industry often dominated by superficiality, his songs offered a raw, honest glimpse into his personal battles and experiences. Tracks like "Star Shopping," "Awful Things," and "Save That Shit" transcended mere entertainment, transforming into anthems for fans who found solace in his vulnerability and unfiltered expression.
+      </p>
+      <p class="career-review-text">
+        What set Lil Peep apart from many artists of his time was his willingness to confront difficult themes that others shied away from. Depression, heartbreak, drug addiction, and the often harsh realities of fame were central themes in his lyrics. His music became a sanctuary for fans facing similar struggles, offering them a sense of understanding and solidarity. Peep's melancholic yet melodic sound, combined with lyrics that were as poetic as they were blunt, established him as a pioneer in the genre of emo rap. He took risks by blending genres in ways that were previously unheard of, leading to a new wave of artists who drew inspiration from his audacity to be different.
+      </p>
+      <p class="career-review-text">
+        Despite his short career, Lil Peep’s influence has only grown stronger after his tragic death in 2017. The release of posthumous albums such as <em>Come Over When You’re Sober, Pt. 2</em> and <em>Everybody’s Everything</em> further expanded his legacy, showcasing tracks that highlighted both his musical range and his continued exploration of deeply personal themes. His mother, Liza Womack, and his team have worked tirelessly to preserve his legacy, ensuring that his fans—both old and new—can connect with his art in a way that honors his vision and voice.
+      </p>
+      <p class="career-review-text">
+        Lil Peep’s legacy lives on not only through his music but also through the impact he had on the music industry and on the lives of his listeners. He broke down barriers between artist and fan, creating a community of individuals who felt heard and understood. To this day, his influence is evident in the work of numerous artists who cite him as an inspiration and a trailblazer. His lyrics, filled with themes of longing, pain, and hope, continue to resonate, reminding fans that they are not alone in their struggles. Lil Peep’s music remains a testament to the power of honesty and vulnerability in art, proving that even in the darkest moments, beauty can emerge.
+      </p>
+      <p class="career-review-text">
+        In a world that often glorifies perfection, Lil Peep was unafraid to show his imperfections. His art served as a mirror, reflecting the complexities of human emotion in a way that few artists have dared to do. Though his life was cut tragically short, Lil Peep’s voice echoes on, inspiring fans to embrace their own uniqueness and to find strength in vulnerability. His legacy is one of bravery, creativity, and profound connection—a legacy that will undoubtedly continue to inspire for generations to come.
+      </p>
+    </div> 
+    
+ 
+<div class="card-group">
+
+  <div class="card">
+    <img src="https://th.bing.com/th/id/OIP.GUt-Txp9hf5wUu1ilcwxIAHaHa?rs=1&pid=ImgDetMain" class="card-img-top" alt="Imagem de Lil Peep">
+    <div class="card-body">
+      <h5 class="card-title">Lil Peep - A Unique Voice</h5>
+      <p class="card-text">Lil Peep, born Gustav Elijah Ahr, broke boundaries with his genre-blending music that combined elements of emo, hip-hop, and punk. His unique style made him a cultural icon and a voice for those who felt misunderstood.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://th.bing.com/th/id/OIP.U4IjrCJ-uSBpJTcf8ZPMOAHaHa?rs=1&pid=ImgDetMain" class="card-img-top" alt="Álbum Come Over When You’re Sober, Pt. 2">
+    <div class="card-body">
+      <h5 class="card-title">Come Over When You’re Sober, Pt. 2</h5>
+      <p class="card-text">Released in 2017, this album showcases Lil Peep's signature style with tracks that delve deep into his struggles and triumphs. It was a pivotal release that solidified his place in the music industry.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 10 mins ago</small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://voluptuousvinyl.com/cdn/shop/products/lil_peep_come_over_when_youre_sober_vinyl_record_1024x1024.jpg?v=1605229228" class="card-img-top" alt="Legado de Lil Peep">
+    <div class="card-body">
+      <h5 class="card-title">Legacy and Influence</h5>
+      <p class="card-text">Even after his untimely death, Lil Peep's music continues to inspire a new generation of artists and fans. His honesty about mental health and life challenges has left an indelible mark on music and culture.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 15 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<div class="card my-5">
+  <div class="card-body">
+    <h5 class="card-title">The Life and Legacy of Lil Peep</h5>
+    <p class="card-text">
+      Lil Peep, born Gustav Elijah Ahr, was a unique artist who not only pushed the boundaries of music but also cultivated a deep connection with his audience. His blend of emo, rap, and punk resonated with young listeners, creating a space where vulnerability and darkness were embraced rather than shunned. Peep's personal struggles, expressed so openly in his lyrics, became a beacon for those feeling lost, isolated, or misunderstood.
+    </p>
+    <p class="card-text">
+      One of Peep's most notable collaborations was with the group GothBoiClique (GBC), a collective that championed a raw, emotional sound blending alternative and hip-hop genres. GBC allowed Peep to experiment with themes of heartbreak, addiction, and resilience, and his contributions helped elevate the group’s status in the underground music scene. Among his close collaborators in GBC was Lil Tracy, a friend and artistic partner who helped create some of Lil Peep's most iconic tracks, like "Awful Things" and "White Wine." The chemistry between Peep and Tracy was undeniable, as they both shared a similar sense of vulnerability and a rebellious approach to their music, which captivated fans worldwide.
+    </p>
+    <p class="card-text">
+      In addition to his work with GBC, Lil Peep also collaborated with other artists in the emo-rap scene, including Ghostemane. Though their styles differed, Ghostemane and Peep shared a fascination with dark, introspective themes, and their work together revealed the common threads of disillusionment and pain woven into their music. The influence of Peep's collaborations extended beyond just the music; they helped create a subculture that encouraged fans to confront their inner demons openly.
+    </p>
+    <p class="card-text">
+      Outside of his musical endeavors, Lil Peep's personal relationships were profoundly important to him. His mother, Liza Womack, was a constant figure in his life, supporting his career even when his choices seemed unconventional. After Peep’s passing, Liza has continued to preserve his legacy, releasing previously unheard tracks and advocating for mental health awareness. Her dedication to his memory has helped fans understand the person behind the artist, further deepening their connection to Peep.
+    </p>
+    <p class="card-text">
+      Peep also had a beloved pet, a dog named Taz, who was frequently featured on his social media. Taz provided Peep with comfort during his difficult times and was often by his side during recording sessions and tours. For fans, Taz became a symbol of the softer side of Peep, a reminder of his capacity for love and his need for companionship amid his chaotic lifestyle.
+    </p>
+    <p class="card-text">
+      Lil Peep's legacy continues to grow, as new listeners discover his music and resonate with his authentic voice. His collaborations, both in and out of GBC, and his personal connections have left an indelible mark on music and culture, establishing him not only as an artist but as a voice for a generation seeking to find beauty in pain.
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>NME</h2>
+  <p>The world’s defining voice in music and pop culture: breaking what’s new and what’s next since 1952.</p>
+  <p class="highlight">Join Our Mailing List</p>
+  <a href="#">Sign Up Now ></a>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+  </div>
+  <div class="bottom-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookie Notice</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Advertise</a>
+    <a href="#">Contact</a>
+  </div>
+  <small>When you purchase through affiliate links on NME.com, you may contribute to our site through commissions. <a href="#">Learn more</a></small>
+  <small>© 2024 NME is part of NME Networks.</small>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
