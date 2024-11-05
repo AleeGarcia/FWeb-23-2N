@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Volume</title>
+</head>
+<body>
+    <audio id="audio" controls>
+        <source src="seu-audio.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <label for="volumeRange">Volume:</label>
+    <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="0.5">
+    
+    <script>
+        const audio = document.getElementById('audio');
+        const volumeRange = document.getElementById('volumeRange');
+
+        // Define o volume inicial
+        audio.volume = volumeRange.value;
+
+        // Atualiza o volume do áudio conforme o slider é movido
+        volumeRange.addEventListener('input', function() {
+            audio.volume = this.value;
+        });
+    </script>
+</body>
+</html>

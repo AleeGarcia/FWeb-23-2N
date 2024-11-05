@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troca de Banner Automática</title>
+  </head>
+  <body>
+    <img id="banner" src="img/house.png" alt="Banner" width="400" />
+
+    <script>
+      const banners = ["img/house.png", "img/house2.png"];
+      let indiceAtual = 0;
+
+      function trocarImagem() {
+        indiceAtual = (indiceAtual + 1) % banners.length;
+        document.getElementById("banner").src = banners[indiceAtual];
+      }
+
+      setInterval(trocarImagem, 1000);
+    </script>
+  </body>
+</html>
