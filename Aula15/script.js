@@ -10,6 +10,7 @@ function fetchPokemon(id = 1) {
     .then((data) => {
       displayPokemon(data);
       playPokemonSound(data.id);
+      currentPokemonId = data.id;
     })
     .catch((error) => {
       console.error("Erro ao buscar o Pokémon:", error);
@@ -50,6 +51,7 @@ function fetchPokemonById(id) {
     .then((data) => {
       displayPokemon(data);
       playPokemonSound(data.id);
+      currentPokemonId = data.id;
     })
     .catch((error) => {
       alert("Pokémon não encontrado!");
@@ -65,4 +67,4 @@ window.onload = () => {
       fetchPokemon();
     }
   });
-};
+}
