@@ -58,4 +58,11 @@ function fetchPokemonById(id) {
 
 window.onload = () => {
   fetchPokemon(1);
+
+  const pokemonNameInput = document.getElementById("pokemon-name");
+  pokemonNameInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      fetchPokemon();
+    }
+  });
 };
