@@ -1,0 +1,133 @@
+body {
+  background-image: url(https://th.bing.com/th/id/R.79e2b012c02f7d289f0b8b8bd6a47592?rik=Mhe4zLwdT30DzA&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #5b5b5b;
+  margin: 0;
+}
+
+h1 {
+  color: #f5f5f5;
+  font-size: 24px;
+  margin-top: 35px;
+  margin-right: 215px;
+}
+
+.pokedex-container {
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+input {
+  margin-left: 25px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 85%;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+.pokedex {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: auto;
+}
+
+.pokedex-image {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-display {
+  position: absolute;
+  top: 64%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+}
+
+#pokemon-image {
+  width: 120px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+#pokemon-display-name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#pokemon-type,
+#pokemon-weight,
+#pokemon-height {
+  margin: 2px 0;
+  font-size: 20px;
+  color: #000000;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.navigation-buttons button {
+  width: 48%;
+}
+
+#audio-toggle {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  padding: 10px 15px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#audio-toggle:hover {
+  background-color: #e60000;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="background-music" loop>
+      <source src="pokemon-theme.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="pokedex-container">
+      <h1>Pokédex</h1>
+      
+
+      <button id="audio-toggle" onclick="toggleAudio()">Ativar Música</button>
+
+      <div class="pokedex" id="pokedex">
+        <img src="img/pokedex.png" alt="Pokédex" class="pokedex-image" />
+
+        <div class="pokemon-display">
+          <img id="pokemon-image" alt="Imagem do Pokémon" />
+          <h2 id="pokemon-display-name">Nome</h2>
+          <input
+          type="text"
+          id="pokemon-name"
+          placeholder="Digite o nome do Pokémon ou ID!"
+        />
+          <p id="pokemon-type">Tipo:</p>
+          <p id="pokemon-weight">Peso:</p>
+          <p id="pokemon-height">Altura:</p>
+          <div class="navigation-buttons">
+            <button onclick="changePokemon(-1)">Anterior</button>
+            <button onclick="changePokemon(1)">Próximo</button>
+          </div>
+        <button onclick="fetchPokemon()">Buscar Pokémon</button>
+
+        </div>
+
+
+      </div>
+
+      <audio id="pokemon-sound"></audio>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      function toggleAudio() {
+        const audio = document.getElementById("background-music");
+        const button = document.getElementById("audio-toggle");
+
+        if (audio.paused) {
+          audio.play();
+          button.textContent = "Desativar Música";
+        } else {
+          audio.pause();
+          button.textContent = "Ativar Música";
+        }
+      }
+    </script>
+  </body>
+</html>
