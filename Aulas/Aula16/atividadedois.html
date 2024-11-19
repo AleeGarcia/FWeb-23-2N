@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>parallax com jquery, atividade dois</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .parallax {
+      height: 100vh;
+      background: url('https://th.bing.com/th/id/R.0d6b7a65ae219f3027cf2330f02104fd?rik=T3h1padN%2bNcTgQ&pid=ImgRaw&r=0') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .conteudo {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+      color: #333;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax"></div>
+  <div class="conteudo">teste. teste. teste</div>
+  <div class="parallax"></div>
+  <div class="conteudo">teste. teste. teste.</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).on("scroll", function () {
+        $(".parallax").each(function () {
+          let scrollTop = $(window).scrollTop();
+          let elementOffset = $(this).offset().top;
+          let distance = scrollTop - elementOffset;
+          $(this).css("background-position", "center " + (distance * 0.5) + "px");
+        });
+      });
+    });
+  </script>
+  <!-- código do script, ctrl c + ctrl v -->
+</body>
+</html>
