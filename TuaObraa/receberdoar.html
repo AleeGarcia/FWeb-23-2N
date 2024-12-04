@@ -237,12 +237,12 @@ button:hover {
   <script>
     let itensDoacao = [];
 
-    // Função para validar o CPF
+    
     function validarCPF(cpf) {
       return /^\d{11}$/.test(cpf);
     }
 
-    // Carregar dados do CPF no localStorage
+ 
     function carregarDadosCPF() {
       const cpf = localStorage.getItem('cpf');
       if (cpf) {
@@ -251,7 +251,7 @@ button:hover {
       }
     }
 
-    // Validar e salvar o CPF no localStorage
+
     document.getElementById("validar-cpf").addEventListener("click", () => {
       const cpfInput = document.getElementById("cpf").value.trim();
       const feedback = document.getElementById("feedback-cpf");
@@ -262,17 +262,17 @@ button:hover {
         return;
       }
 
-      // Salva o CPF no localStorage
+ 
       localStorage.setItem('cpf', cpfInput);
       feedback.textContent = "CPF validado com sucesso!";
       feedback.style.color = "green";
 
-      // Exibe a seção de doação
+ 
       document.getElementById("secao-cpf").style.display = "none";
       document.getElementById("secao-doacao").style.display = "block";
     });
 
-    // Formulário de Doação
+
     document.getElementById("formulario-doacao").addEventListener("submit", (event) => {
       event.preventDefault();
 
