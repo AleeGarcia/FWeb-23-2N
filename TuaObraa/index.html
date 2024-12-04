@@ -1,0 +1,160 @@
+<!-- marketing.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing do Projeto</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #00796b;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    header img {
+  max-width: 120px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 25%;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+    .usuario-info {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #00796b;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      display: none;
+      z-index: 100;
+    }
+
+    .usuario-info span {
+      display: block;
+    }
+
+    .carousel {
+      max-width: 2000px;
+      margin-bottom: auto;
+    }
+
+    .carousel-inner img {
+      max-height: 600px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+
+<body>
+<header>
+  <img src="./img/logo.png" alt="Logo do site">
+  <h1>Bem-vindo ao Projeto de Doações!</h1>
+</header>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/2015-10-16_02.49.48-2.jpg?v=1669752185" alt="First slide">
+      <div class="carousel-caption">
+        <h5>Live Forever</h5>
+        <p>"Live Forever is a celebration of life and the quest for lasting meaning..."</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/Lil_Peep_teen_romance_2_copy.jpg?v=1718416279" alt="Second slide">
+      <div class="carousel-caption">
+        <h5>Teen Romance</h5>
+        <p>"Teen Romance is a nostalgic reflection on young love..."</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://lilpeep.com/cdn/shop/articles/Screenshot_2023-08-11_at_5.29.01_PM.png?v=1691789516" alt="Third slide">
+      <div class="carousel-caption">
+        <h5>Diamonds</h5>
+        <p>"Diamonds highlights Lil Peep's struggle with fame and emotional pain..."</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Voltar</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<main>
+  <div class="usuario-info" id="usuario-info">
+    <h2>Olá, <span id="nome-usuario"></span></h2>
+    <span>CPF: <span id="cpf-usuario"></span></span>
+    <span>Email: <span id="email-usuario"></span></span>
+  </div>
+
+  <button onclick="irParaReceberdoar()">Quero Doar ou Receber</button>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function carregarDadosUsuario() {
+    const dadosUsuario = JSON.parse(localStorage.getItem('usuario'));
+
+    if (dadosUsuario) {
+      document.getElementById('nome-usuario').textContent = dadosUsuario.nome;
+      document.getElementById('cpf-usuario').textContent = dadosUsuario.cpf;
+      document.getElementById('email-usuario').textContent = dadosUsuario.email;
+      document.getElementById('usuario-info').style.display = 'block';
+    }
+  }
+
+  function irParaReceberdoar() {
+    window.location.href = 'receberdoar.html'; 
+  }
+
+  window.onload = carregarDadosUsuario;
+</script>
+</body>
+</html>
