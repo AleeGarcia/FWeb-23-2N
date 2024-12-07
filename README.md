@@ -18,7 +18,7 @@ Você pode acessar o projeto através do GitHub Pages ou escanear o QR code abai
 ## Como usar
 
 1. Acesse a URL do seu projeto:
-   - [URL do projeto no GitHub Pages](https://<seu-usuario>.github.io/<nome-do-repositorio>)
+   - [URL do projeto no GitHub Pages](https://aleegarcia.github.io/FWeb-23-2N/)
    
 2. Ou escaneie o QR Code com seu celular para abrir o site diretamente.
 
