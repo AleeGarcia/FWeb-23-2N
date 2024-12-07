@@ -6,7 +6,7 @@ O trabalho de aplicação TuaObra, desenvolvido pela turma 5729 do curso de Apre
  doação de sobras de obras, conecta doadores a pessoas em situação de vulnerabilidade,
  principalmente aquelas afetadas por desastres naturais, como enchentes, ou que enfrentam
  dificuldades financeiras para realizar reformas em suas casas.
- Oprojeto nasceu durante a competição Rally Siga, onde a turma conquistou o terceiro lugar,
+ O projeto nasceu durante a competição Rally Siga, onde a turma conquistou o terceiro lugar,
  e se transformou em uma iniciativa de impacto social e ambiental.
 
 ## Acesse o Projeto
