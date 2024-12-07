@@ -52,8 +52,8 @@ Serviço Nacional de Aprendizagem Comercial- SENAC
 
 ## OBS:
 
-O projeto está abrindo direto no index.html, porém deveria abrir a página de cadastro, no qual a api pega os dados do usuário e salva no projeto
-Porém serve como teste de design e informação.
+O projeto está abrindo direto no index.html, porém deveria abrir a página de cadastro, no qual a api pega os dados do usuário e salva no projeto 
+ porém serve como teste de design e informação.
 
 O QR Code tem um limite de 14 dias
 Início 07/12/2024
