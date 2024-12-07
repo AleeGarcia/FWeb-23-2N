@@ -31,7 +31,7 @@ Você pode acessar o projeto através do GitHub Pages ou escanear o QR code abai
  os doadores disponíveis. Os materiais de exemplo são tijolos, cimento, telhas, etc. Deve ter
  uma busca por material e localização.
  Ao selecionar disponibilizar material(Doar), criar uma tela de cadastro de material a doar.
- Emtodas as telas deve ter um carrossel fornecendo informações sobre reciclagem e
+No index.html deve ter um carrossel fornecendo informações sobre reciclagem e
  consumo consciente de materiais
 
 ## Como Contribuir
