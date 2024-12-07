@@ -307,6 +307,7 @@
         const itensFiltrados = itensDoacao.filter((item) =>
           item.nome.toLowerCase().startsWith(pesquisaTermo)
         );
+        
 
         itensFiltrados.forEach((item, index) => {
           const itemLista = document.createElement("li");
