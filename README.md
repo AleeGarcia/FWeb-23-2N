@@ -49,3 +49,15 @@ Se você deseja contribuir com o projeto, siga os passos abaixo:
 Serviço Nacional de Aprendizagem Comercial- SENAC
  Técnico em Desenvolvimento de Sistemas- TDS
  UC12- Desenvolver Interface Web para Desktop
+
+## OBS:
+
+O projeto está abrindo direto no index.html, porém deveria abrir a página de cadastro, no qual a api pega os dados do usuário e salva no projeto
+Porém serve como teste de design e informação.
+
+O QR Code tem um limite de 14 dias
+Início 07/12/2024
+Fim    21/12/2024
+
+Porém provavelmente o git page ainda estará funcionando, o esboço do projeto está feito, ainda tenho que fazer o figma tenham um ótimo final de semana e feliz 2025 pra todo mundo.
+
