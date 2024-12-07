@@ -1,115 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Pessoas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Pessoas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-    .container {
-      background-color: white;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      width: 80%;
-      max-width: 600px;
-    }
+      .container {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+      }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
 
-    .pessoa-item {
-      background-color: #e3e3e3;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+      .pessoa-item {
+        background-color: #e3e3e3;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .pessoa-item h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #333;
-    }
+      .pessoa-item h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+      }
 
-    .pessoa-item p {
-      margin: 5px 0;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
+      .pessoa-item p {
+        margin: 5px 0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de Pessoas</h1>
+      <div id="pessoas-list"></div>
+    </div>
 
-  <div class="container">
-    <h1>Lista de Pessoas</h1>
-    <div id="pessoas-list"></div>
-  </div>
+    <script>
+      const pessoas = {
+        pessoas: [
+          {
+            nome: "João Silva",
+            idade: 28,
+            cpf: "123.456.789-00",
+            telefone: "(11) 91234-5678",
+          },
+          {
+            nome: "Maria Oliveira",
+            idade: 35,
+            cpf: "987.654.321-00",
+            telefone: "(21) 98765-4321",
+          },
+          {
+            nome: "Carlos Souza",
+            idade: 42,
+            cpf: "456.789.123-00",
+            telefone: "(31) 99876-5432",
+          },
+          {
+            nome: "Fernanda Costa",
+            idade: 25,
+            cpf: "789.123.456-00",
+            telefone: "(41) 93456-7890",
+          },
+          {
+            nome: "Ricardo Pereira",
+            idade: 50,
+            cpf: "321.654.987-00",
+            telefone: "(61) 92345-6789",
+          },
+        ],
+      };
 
-  <script>
+      const listElement = document.getElementById("pessoas-list");
 
-    const pessoas = {
-      "pessoas": [
-        {
-          "nome": "João Silva",
-          "idade": 28,
-          "cpf": "123.456.789-00",
-          "telefone": "(11) 91234-5678"
-        },
-        {
-          "nome": "Maria Oliveira",
-          "idade": 35,
-          "cpf": "987.654.321-00",
-          "telefone": "(21) 98765-4321"
-        },
-        {
-          "nome": "Carlos Souza",
-          "idade": 42,
-          "cpf": "456.789.123-00",
-          "telefone": "(31) 99876-5432"
-        },
-        {
-          "nome": "Fernanda Costa",
-          "idade": 25,
-          "cpf": "789.123.456-00",
-          "telefone": "(41) 93456-7890"
-        },
-        {
-          "nome": "Ricardo Pereira",
-          "idade": 50,
-          "cpf": "321.654.987-00",
-          "telefone": "(61) 92345-6789"
-        }
-      ]
-    };
+      pessoas.pessoas.forEach((pessoa) => {
+        const div = document.createElement("div");
+        div.classList.add("pessoa-item");
 
-    const listElement = document.getElementById('pessoas-list');
-    
-    pessoas.pessoas.forEach(pessoa => {
-      const div = document.createElement('div');
-      div.classList.add('pessoa-item');
-      
-      div.innerHTML = `
+        div.innerHTML = `
         <h3>${pessoa.nome}</h3>
         <p><strong>Idade:</strong> ${pessoa.idade} anos</p>
         <p><strong>CPF:</strong> ${pessoa.cpf}</p>
         <p><strong>Telefone:</strong> ${pessoa.telefone}</p>
       `;
-      
-      listElement.appendChild(div);
-    });
-  </script>
 
-</body>
+        listElement.appendChild(div);
+      });
+    </script>
+  </body>
 </html>

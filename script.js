@@ -1,3 +1,3 @@
-var curso="FWeb-23-2N"
+var curso = "FWeb-23-2N";
 
-alert(curso)
+alert(curso);

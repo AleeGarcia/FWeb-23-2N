@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jQuery</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
-        .owl-carousel .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-            background: #4a90e2;
-            color: #fff;
-            font-size: 24px;
-        }
+      .owl-carousel .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background: #4a90e2;
+        color: #fff;
+        font-size: 24px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="owl-carousel">
-        <div class="item">Slide 1</div>
-        <div class="item">Slide 2</div>
-        <div class="item">Slide 3</div>
-        <div class="item">Slide 4</div>
+      <div class="item">Slide 1</div>
+      <div class="item">Slide 2</div>
+      <div class="item">Slide 3</div>
+      <div class="item">Slide 4</div>
     </div>
 
     <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                }
-            });
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
         });
+      });
     </script>
-
-</body>
+  </body>
 </html>

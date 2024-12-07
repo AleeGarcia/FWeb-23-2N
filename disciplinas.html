@@ -1,123 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Disciplinas e Alunos</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Disciplinas e Alunos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-    .container {
-      background-color: white;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      width: 80%;
-      max-width: 600px;
-    }
+      .container {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+      }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
 
-    .disciplina-item {
-      background-color: #e3e3e3;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+      .disciplina-item {
+        background-color: #e3e3e3;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .disciplina-item h3 {
-      margin: 0;
-      font-size: 18px;
-    }
+      .disciplina-item h3 {
+        margin: 0;
+        font-size: 18px;
+      }
 
-    .disciplina-item p {
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
+      .disciplina-item p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Disciplinas e Alunos</h1>
+      <div id="disciplinas-list"></div>
+    </div>
 
-  <div class="container">
-    <h1>Disciplinas e Alunos</h1>
-    <div id="disciplinas-list"></div>
-  </div>
+    <script>
+      const disciplinas = {
+        disciplinas: [
+          {
+            nome: "Matemática",
+            alunos: ["João", "Maria", "Carlos"],
+          },
+          {
+            nome: "Português",
+            alunos: ["Ana", "Lucas", "Fernanda"],
+          },
+          {
+            nome: "História",
+            alunos: ["Pedro", "Julia", "Ricardo"],
+          },
+          {
+            nome: "Geografia",
+            alunos: ["Larissa", "Gustavo", "Beatriz"],
+          },
+          {
+            nome: "Química",
+            alunos: ["Felipe", "Roberta", "Igor"],
+          },
+          {
+            nome: "Física",
+            alunos: ["Marcelo", "Camila", "Rafael"],
+          },
+          {
+            nome: "Biologia",
+            alunos: ["Tatiane", "Eduardo", "Sophia"],
+          },
+          {
+            nome: "Inglês",
+            alunos: ["Gabriela", "Vinícius", "Luciana"],
+          },
+          {
+            nome: "Educação Física",
+            alunos: ["André", "Carla", "Marcos"],
+          },
+          {
+            nome: "Arte",
+            alunos: ["Tatiane", "Victor", "Amanda"],
+          },
+        ],
+      };
 
-  <script>
-    const disciplinas = {
-      "disciplinas": [
-        {
-          "nome": "Matemática",
-          "alunos": ["João", "Maria", "Carlos"]
-        },
-        {
-          "nome": "Português",
-          "alunos": ["Ana", "Lucas", "Fernanda"]
-        },
-        {
-          "nome": "História",
-          "alunos": ["Pedro", "Julia", "Ricardo"]
-        },
-        {
-          "nome": "Geografia",
-          "alunos": ["Larissa", "Gustavo", "Beatriz"]
-        },
-        {
-          "nome": "Química",
-          "alunos": ["Felipe", "Roberta", "Igor"]
-        },
-        {
-          "nome": "Física",
-          "alunos": ["Marcelo", "Camila", "Rafael"]
-        },
-        {
-          "nome": "Biologia",
-          "alunos": ["Tatiane", "Eduardo", "Sophia"]
-        },
-        {
-          "nome": "Inglês",
-          "alunos": ["Gabriela", "Vinícius", "Luciana"]
-        },
-        {
-          "nome": "Educação Física",
-          "alunos": ["André", "Carla", "Marcos"]
-        },
-        {
-          "nome": "Arte",
-          "alunos": ["Tatiane", "Victor", "Amanda"]
-        }
-      ]
-    };
+      const listElement = document.getElementById("disciplinas-list");
 
-    const listElement = document.getElementById('disciplinas-list');
-    
-    disciplinas.disciplinas.forEach(disciplina => {
-      const div = document.createElement('div');
-      div.classList.add('disciplina-item');
-      
-      const alunos = disciplina.alunos.join(", ");
+      disciplinas.disciplinas.forEach((disciplina) => {
+        const div = document.createElement("div");
+        div.classList.add("disciplina-item");
 
-      div.innerHTML = `
+        const alunos = disciplina.alunos.join(", ");
+
+        div.innerHTML = `
         <h3>${disciplina.nome}</h3>
         <p><strong>Alunos:</strong> ${alunos}</p>
       `;
-      
-      listElement.appendChild(div);
-    });
-  </script>
 
-</body>
+        listElement.appendChild(div);
+      });
+    </script>
+  </body>
 </html>

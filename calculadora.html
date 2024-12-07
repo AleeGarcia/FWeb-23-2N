@@ -1,116 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Calculadora </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
 
-        .calculadora {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-        }
+      .calculadora {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+      }
 
-        #display {
-            width: 100%;
-            height: 40px;
-            font-size: 2em;
-            text-align: right;
-            margin-bottom: 10px;
-        }
+      #display {
+        width: 100%;
+        height: 40px;
+        font-size: 2em;
+        text-align: right;
+        margin-bottom: 10px;
+      }
 
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
 
-        button {
-            padding: 20px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 5px;
-            background-color: #000000;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+      button {
+        padding: 20px;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 5px;
+        background-color: #000000;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
 
-        button:hover {
-            background-color: #003457;
-        }
+      button:hover {
+        background-color: #003457;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="calculadora">
-        <input type="text" id="display" disabled>
-        <!-- disabled, ninguém escreve na tela -->
-        <div class="buttons">
-            <button onclick="clearText()">C</button>
-            <button onclick="addOperator('/')">/</button>
-            <button onclick="addOperator('*')">*</button>
-            <button onclick="addOperator('-')">-</button>
-            <button onclick="addNumber('7')">7</button>
-            <button onclick="addNumber('8')">8</button>
-            <button onclick="addNumber('9')">9</button>
-            <button onclick="addOperator('+')">+</button>
-            <button onclick="addNumber('4')">4</button>
-            <button onclick="addNumber('5')">5</button>
-            <button onclick="addNumber('6')">6</button>
-            <button onclick="calcula()">=</button>
-            <button onclick="addNumber('1')">1</button>
-            <button onclick="addNumber('2')">2</button>
-            <button onclick="addNumber('3')">3</button>
-            <button onclick="addNumber('0')">0</button>
-            <button onclick="addDecimal()">.</button>
-        </div>
+      <input type="text" id="display" disabled />
+      <!-- disabled, ninguém escreve na tela -->
+      <div class="buttons">
+        <button onclick="clearText()">C</button>
+        <button onclick="addOperator('/')">/</button>
+        <button onclick="addOperator('*')">*</button>
+        <button onclick="addOperator('-')">-</button>
+        <button onclick="addNumber('7')">7</button>
+        <button onclick="addNumber('8')">8</button>
+        <button onclick="addNumber('9')">9</button>
+        <button onclick="addOperator('+')">+</button>
+        <button onclick="addNumber('4')">4</button>
+        <button onclick="addNumber('5')">5</button>
+        <button onclick="addNumber('6')">6</button>
+        <button onclick="calcula()">=</button>
+        <button onclick="addNumber('1')">1</button>
+        <button onclick="addNumber('2')">2</button>
+        <button onclick="addNumber('3')">3</button>
+        <button onclick="addNumber('0')">0</button>
+        <button onclick="addDecimal()">.</button>
+      </div>
     </div>
     <script>
+      function addNumber(numero) {
+        document.getElementById("display").value += numero;
+      }
 
-        function addNumber(numero) {
-            document.getElementById('display').value += numero;
+      function addOperator(operator) {
+        document.getElementById("display").value += " " + operator + " ";
+      }
+
+      function adicionarDecimal() {
+        const tela = document.getElementById("display");
+        const textoAtual = tela.value;
+        if (!textoAtual.endsWith(".") && !textoAtual.endsWith(" ")) {
+          tela.value += ".";
         }
+      }
 
-        function addOperator(operator) {
-            document.getElementById('display').value += ' ' + operator + ' ';
+      function clearText() {
+        document.getElementById("display").value = "";
+      }
+
+      function calcula() {
+        const display = document.getElementById("display");
+        try {
+          display.value = eval(display.value.replace(/ /g, ""));
+          // eval é passado como uma string, e remove espaços com replace
+        } catch (error) {
+          display.value = "Erro";
         }
-
-        function adicionarDecimal() {
-            const tela = document.getElementById('display');
-            const textoAtual = tela.value;
-            if (!textoAtual.endsWith('.') && !textoAtual.endsWith(' ')) {
-                tela.value += '.';
-            }
-        }
-
-
-        function clearText() {
-            document.getElementById('display').value = '';
-        }
-
-        function calcula() {
-            const display = document.getElementById('display');
-            try {
-                display.value = eval(display.value.replace(/ /g, ''));
-                // eval é passado como uma string, e remove espaços com replace
-            } catch (error) {
-                display.value = 'Erro';
-            }
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>

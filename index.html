@@ -1,280 +1,327 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste de Painel</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: "Arial", sans-serif;
-            background-color: #ffffff;
-            color: #333;
-        }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #ffffff;
+        color: #333;
+      }
 
-        body {
-            display: flex;
-            flex-direction: column;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
 
-        main {
-            flex: 1;
-            padding: 40px 20px;
-            text-align: center;
-        }
+      main {
+        flex: 1;
+        padding: 40px 20px;
+        text-align: center;
+      }
 
-        header {
-            background-color: #0a0b2a;
-            padding: 10px 0;
-        }
+      header {
+        background-color: #0a0b2a;
+        padding: 10px 0;
+      }
 
-        .container {
-            width: 85%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .container {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        h1 {
-            font-size: 24px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-        }
+      h1 {
+        font-size: 24px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+      }
 
-        h1 img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
+      h1 img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
 
-        nav {
-            display: flex;
-        }
+      nav {
+        display: flex;
+      }
 
-        .menu-opcoes {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+      .menu-opcoes {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
 
-        .menu-opcoes li {
-            display: inline;
-        }
+      .menu-opcoes li {
+        display: inline;
+      }
 
-        .menu-opcoes a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 5px 10px;
-            transition: background-color 0.3s ease;
-        }
+      .menu-opcoes a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 10px;
+        transition: background-color 0.3s ease;
+      }
 
-        .menu-opcoes a:hover {
-            background-color: #929292;
-            border-radius: 5px;
-        }
+      .menu-opcoes a:hover {
+        background-color: #929292;
+        border-radius: 5px;
+      }
 
-        p {
-            font-size: 18px;
-            color: #9b9b9b;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+      p {
+        font-size: 18px;
+        color: #9b9b9b;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
 
-        section#destaques {
-            background-color: #fff;
-            padding: 40px 0;
-        }
+      section#destaques {
+        background-color: #fff;
+        padding: 40px 0;
+      }
 
-        .paineis {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+      .paineis {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-        .painel {
-            background-color: #222223;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+      .painel {
+        background-color: #222223;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
 
-        .painel:hover {
-            transform: scale(1.05);
-        }
+      .painel:hover {
+        transform: scale(1.05);
+      }
 
-        footer {
-            background-color: #0a0b2a;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+      footer {
+        background-color: #0a0b2a;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
 
-        footer .social-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 24px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 50%;
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            text-align: center;
-            line-height: 20px;
-        }
+      footer .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        background-color: #333;
+        padding: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 20px;
+      }
 
-        footer .social-icons a:hover {
-            color: #929292;
-            background-color: #555;
-        }
+      footer .social-icons a:hover {
+        color: #929292;
+        background-color: #555;
+      }
 
-        .search-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
+      .search-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
 
-        .search-input {
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-            width: 250px;
-        }
+      .search-input {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        width: 250px;
+      }
 
-        .search-button {
-            background-color: #ffffff;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 0 5px 5px 0;
-        }
+      .search-button {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 0 5px 5px 0;
+      }
 
-        .search-button img {
-            width: 20px;
-            height: 20px;
-        }
+      .search-button img {
+        width: 20px;
+        height: 20px;
+      }
     </style>
-</head>
-<body>
-<header>
-    <div class="container">
+  </head>
+  <body>
+    <header>
+      <div class="container">
         <h1>
-            <img src="Aulas/Aula5/img/senac.png" alt="Logo" />Alessandro Garcias Site!
+          <img src="Aulas/Aula5/img/senac.png" alt="Logo" />Alessandro Garcias
+          Site!
         </h1>
         <nav>
-            <ul class="menu-opcoes">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+          <ul class="menu-opcoes">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main>
-    <section id="destaques">
+    <main>
+      <section id="destaques">
         <h2>Projetos</h2>
         <div class="paineis">
-            <div class="painel">
-                <h3>Aula 1</h3>
-                <p>
-                    <a href="Aulas/Aula1/screen/atividadeum.html" target="_blank">Primeira Aula</a>
-                </p>
-            </div>
-            <div class="painel">
-                <h3>Aula 2</h3>
-                <p>
-                    <a href="Aulas/Aula2/screen/filme.html" target="_blank">Segunda Aula</a>
-                </p>
-            </div>
-            <div class="painel">
-                <h3>Aula 3</h3>
-                <p>
-                    <a href="Aulas/Aula3/screen/fonte.html" target="_blank">Terceira Aula</a>
-                </p>
-            </div>
-            <div class="painel">
-                <h3>Aula 4</h3>
-                <a href="Aulas/Aula4/screen/quadro.html" target="_blank">Quarta Aula</a>
-            </div>
-            <div class="painel">
-                <h3>Aula 5</h3>
-                <a href="Aulas/Aula5/screen/semantico.html" target="_blank">Quinta Aula</a>
-            </div>
-            <div class="painel">
-                <h3>Teste</h3>
-                <p>Teste</p>
-            </div>
-            <div class="painel">
-                <h3>Teste</h3>
-                <p>Teste</p>
-            </div>
-            <div class="painel">
-                <h3>Teste</h3>
-                <p>Teste</p>
-            </div>
-            <div class="painel">
-                <h3>Teste</h3>
-                <p>Teste</p>
-            </div>
+          <div class="painel">
+            <h3>Aula 1</h3>
+            <p>
+              <a href="Aulas/Aula1/screen/atividadeum.html" target="_blank"
+                >Primeira Aula</a
+              >
+            </p>
+          </div>
+          <div class="painel">
+            <h3>Aula 2</h3>
+            <p>
+              <a href="Aulas/Aula2/screen/filme.html" target="_blank"
+                >Segunda Aula</a
+              >
+            </p>
+          </div>
+          <div class="painel">
+            <h3>Aula 3</h3>
+            <p>
+              <a href="Aulas/Aula3/screen/fonte.html" target="_blank"
+                >Terceira Aula</a
+              >
+            </p>
+          </div>
+          <div class="painel">
+            <h3>Aula 4</h3>
+            <a href="Aulas/Aula4/screen/quadro.html" target="_blank"
+              >Quarta Aula</a
+            >
+          </div>
+          <div class="painel">
+            <h3>Aula 5</h3>
+            <a href="Aulas/Aula5/screen/semantico.html" target="_blank"
+              >Quinta Aula</a
+            >
+          </div>
+          <div class="painel">
+            <h3>Teste</h3>
+            <p>Teste</p>
+          </div>
+          <div class="painel">
+            <h3>Teste</h3>
+            <p>Teste</p>
+          </div>
+          <div class="painel">
+            <h3>Teste</h3>
+            <p>Teste</p>
+          </div>
+          <div class="painel">
+            <h3>Teste</h3>
+            <p>Teste</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <div class="search-container">
-        <form id="searchForm" action="https://www.google.com/search" method="get" onsubmit="return validateForm()">
-            <input type="text" name="q" class="search-input" placeholder="Pesquisar..." required />
-            <button type="submit" class="search-button">
-                <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" alt="Buscar" />
-            </button>
+      <div class="search-container">
+        <form
+          id="searchForm"
+          action="https://www.google.com/search"
+          method="get"
+          onsubmit="return validateForm()"
+        >
+          <input
+            type="text"
+            name="q"
+            class="search-input"
+            placeholder="Pesquisar..."
+            required
+          />
+          <button type="submit" class="search-button">
+            <img
+              src="https://img.icons8.com/material-outlined/24/000000/search--v1.png"
+              alt="Buscar"
+            />
+          </button>
         </form>
-    </div>
-</main>
+      </div>
+    </main>
 
-<footer>
-    <div class="container">
+    <footer>
+      <div class="container">
         <div class="social-icons">
-            <a href="https://pt-br.facebook.com/#:~:text=Entre%20no%20Facebook%20para%20come%C3%A7ar%20a%20compartilhar%20e%20se%20conectar" role="button" style="background-color: #3b5998"><i class="fab fa-facebook-f"></i></a>
+          <a
+            href="https://pt-br.facebook.com/#:~:text=Entre%20no%20Facebook%20para%20come%C3%A7ar%20a%20compartilhar%20e%20se%20conectar"
+            role="button"
+            style="background-color: #3b5998"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
 
-            <a href="https://www.instagram.com/" role="button" style="background-color: #ac2bac"><i class="fab fa-instagram"></i></a>
+          <a
+            href="https://www.instagram.com/"
+            role="button"
+            style="background-color: #ac2bac"
+            ><i class="fab fa-instagram"></i
+          ></a>
 
-            <a href="https://www.bing.com/ck/a?!&&p=9c2bf6997a1fe857JmltdHM9MTcyNzc0MDgwMCZpZ3VpZD0wNTJlMmUyYy0zYTdkLTZkN2QtMjI0Yy0zZDU1M2IwNDZjYzMmaW5zaWQ9NTE5OA&ptn=3&ver=2&hsh=3&fclid=052e2e2c-3a7d-6d7d-224c-3d553b046cc3&psq=linkedin&u=a1aHR0cHM6Ly9ici5saW5rZWRpbi5jb20vIzp-OnRleHQ9Q29uZWN0ZS1zZSBjb20gc2V1cyBjb2xlZ2FzIGRlIHRyYWJhbGhvLCBkZSBjbGFzc2UgZSBhbWlnb3M&ntb=1" role="button" style="background-color: #0082ca"><i class="fab fa-linkedin-in"></i></a>
+          <a
+            href="https://www.bing.com/ck/a?!&&p=9c2bf6997a1fe857JmltdHM9MTcyNzc0MDgwMCZpZ3VpZD0wNTJlMmUyYy0zYTdkLTZkN2QtMjI0Yy0zZDU1M2IwNDZjYzMmaW5zaWQ9NTE5OA&ptn=3&ver=2&hsh=3&fclid=052e2e2c-3a7d-6d7d-224c-3d553b046cc3&psq=linkedin&u=a1aHR0cHM6Ly9ici5saW5rZWRpbi5jb20vIzp-OnRleHQ9Q29uZWN0ZS1zZSBjb20gc2V1cyBjb2xlZ2FzIGRlIHRyYWJhbGhvLCBkZSBjbGFzc2UgZSBhbWlnb3M&ntb=1"
+            role="button"
+            style="background-color: #0082ca"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
 
-            <a href="https://github.com/" role="button" style="background-color: #333333"><i class="fab fa-github"></i></a>
+          <a
+            href="https://github.com/"
+            role="button"
+            style="background-color: #333333"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script>
-    function validateForm() {
-        const searchInput = document.querySelector('.search-input');
-        if (searchInput.value.trim() === '') {
-            alert('Por favor, preencha o campo de pesquisa.');
-            return false;
+    <script>
+      function validateForm() {
+        const searchInput = document.querySelector(".search-input");
+        if (searchInput.value.trim() === "") {
+          alert("Por favor, preencha o campo de pesquisa.");
+          return false;
         }
         return true;
-    }
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>

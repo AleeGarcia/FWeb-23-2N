@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tipos de position teste</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
 
-        .container {
-            width: 800px;
-            height: 600px;
-            background-color: #ddd;
-            position: relative;
-        }
+      .container {
+        width: 800px;
+        height: 600px;
+        background-color: #ddd;
+        position: relative;
+      }
 
-        .static {
-            background-color: #2c2e5e;
-            color: white;
-            padding: 10px;
-            position: static;
-        }
+      .static {
+        background-color: #2c2e5e;
+        color: white;
+        padding: 10px;
+        position: static;
+      }
 
-        
-        .relative {
-            background-color: #4ab69b;
-            color: white;
-            padding: 10px;
-            position: relative;
-            top: 20px;
-            left: 0px; 
-        }
+      .relative {
+        background-color: #4ab69b;
+        color: white;
+        padding: 10px;
+        position: relative;
+        top: 20px;
+        left: 0px;
+      }
 
-        .absolute {
-            background-color: #d9534f;
-            color: white;
-            padding: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+      .absolute {
+        background-color: #d9534f;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
 
-        .fixed {
-            background-color: #f04e94;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 10px;
-            right: 10px; 
-        }
+      .fixed {
+        background-color: #f04e94;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <div class="static">Static</div>
-        <div class="relative">Relative</div>
-        <div class="absolute">Absolute</div>
+      <div class="static">Static</div>
+      <div class="relative">Relative</div>
+      <div class="absolute">Absolute</div>
     </div>
 
     <div class="fixed">Fixed</div>
-
-</body>
+  </body>
 </html>
