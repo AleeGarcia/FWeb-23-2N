@@ -233,6 +233,13 @@
           <button type="submit">Doar</button>
         </form>
 
+        <label for="pesquisa-item">Pesquisar Material:</label>
+        <input
+          type="text"
+          id="pesquisa-item"
+          placeholder="Digite a letra ou nome do item"
+        />
+
         <h3>Lista de Doações</h3>
         <ul id="lista-doacoes"></ul>
       </section>
@@ -289,6 +296,34 @@
 
     <script>
       let itensDoacao = [];
+
+      function filtrarDoacoes() {
+        const pesquisaTermo = document
+          .getElementById("pesquisa-item")
+          .value.toLowerCase();
+        const listaDoacoes = document.getElementById("lista-doacoes");
+        listaDoacoes.innerHTML = "";
+
+        const itensFiltrados = itensDoacao.filter((item) =>
+          item.nome.toLowerCase().startsWith(pesquisaTermo)
+        );
+
+        itensFiltrados.forEach((item, index) => {
+          const itemLista = document.createElement("li");
+          itemLista.textContent = `${item.nome} - ${item.quantidade} unidade(s) - Região: ${item.regiao}`;
+          const botaoRetirar = document.createElement("button");
+          botaoRetirar.textContent = "Retirar";
+          botaoRetirar.addEventListener("click", () =>
+            mostrarFormularioRetirada(index)
+          );
+          itemLista.appendChild(botaoRetirar);
+          listaDoacoes.appendChild(itemLista);
+        });
+      }
+
+      document
+        .getElementById("pesquisa-item")
+        .addEventListener("input", filtrarDoacoes);
 
       function validarCPF(cpf) {
         return /^\d{11}$/.test(cpf);
