@@ -1,6 +1,6 @@
 # Tua Obra
 
-O trabalho de aplicação TuaObra, desenvolvido pela turma 5729 do curso de Aprendizagem
+O trabalho de aplicação Tua Obra, desenvolvido pela turma 5729 do curso de Aprendizagem
  em. Qualificação de Vendas do SENAC São Leopoldo, visa oferecer uma solução inovadora
  para o reaproveitamento de materiais de construção. O aplicativo, idealizado para facilitar a
  doação de sobras de obras, conecta doadores a pessoas em situação de vulnerabilidade,
