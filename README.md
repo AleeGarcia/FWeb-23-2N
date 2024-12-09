@@ -19,6 +19,8 @@ Você pode acessar o projeto através do GitHub Pages ou escanear o QR code abai
 
 1. Acesse a URL do seu projeto:
    - [URL do projeto no GitHub Pages](https://aleegarcia.github.io/FWeb-23-2N/)
+  
+   - [URL do projeto no Figma / Mobile](https://www.figma.com/proto/zvBUZGbwGh4dzjHNN5hoEU/TUA-OBRA?node-id=0-1&t=Del3cTNAmXDlBtIL-1)
    
 2. Ou escaneie o QR Code com seu celular para abrir o site diretamente.
 
