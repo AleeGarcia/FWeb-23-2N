@@ -27,12 +27,12 @@ Você pode acessar o projeto através do GitHub Pages ou escanear o QR code abai
 ## Funcionalidades
 
 -  O app deve ter uma tela de entrada com o logo e o lema e tela de cadastro de usuários;
- Após cadastro de usuário, deve mostrar uma tela de opções(Receber/Doar) de solicitar
+ Após cadastro de usuário, deve mostrar uma tela de opções (Receber/Doar) de solicitar
  material ou disponibilizar material.
- Ao selecionar solicitar material(Receber), criar uma tela de escolha de materiais e mostrar
+ Ao selecionar solicitar material (Receber), criar uma tela de escolha de materiais e mostrar
  os doadores disponíveis. Os materiais de exemplo são tijolos, cimento, telhas, etc. Deve ter
  uma busca por material e localização.
- Ao selecionar disponibilizar material(Doar), criar uma tela de cadastro de material a doar.
+ Ao selecionar disponibilizar material (Doar), criar uma tela de cadastro de material a doar.
 No index.html deve ter um carrossel fornecendo informações sobre reciclagem e
  consumo consciente de materiais
 
@@ -48,9 +48,9 @@ Se você deseja contribuir com o projeto, siga os passos abaixo:
 
 ## Licença
 
-Serviço Nacional de Aprendizagem Comercial- SENAC
- Técnico em Desenvolvimento de Sistemas- TDS
- UC12- Desenvolver Interface Web para Desktop
+Serviço Nacional de Aprendizagem Comercial - SENAC
+ Técnico em Desenvolvimento de Sistemas - TDS
+ UC12 - Desenvolver Interface Web para Desktop
 
 ## OBS:
 
@@ -58,8 +58,10 @@ O projeto está abrindo direto no index.html, porém deveria abrir a página de 
  porém serve como teste de design e informação.
 
 O QR Code tem um limite de 14 dias
-Início 07/12/2024
-Fim    21/12/2024
 
-Porém provavelmente o git page ainda estará funcionando, o esboço do projeto está feito, ainda tenho que fazer o figma tenham um ótimo final de semana e feliz 2025 pra todo mundo.
+Início 07/12/2024
+
+Fim 21/12/2024
+
+Porém provavelmente o git page ainda estará funcionando, o esboço do projeto está feito.
 
