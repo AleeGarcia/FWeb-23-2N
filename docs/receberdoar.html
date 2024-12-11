@@ -395,36 +395,64 @@ function exibirDoacoes() {
 }
 
 
-      function mostrarFormularioRetirada(index) {
-        document.getElementById("secao-doacao").style.display = "none";
-        document.getElementById("secao-retirada").style.display = "block";
 
-        document.getElementById("formulario-retirada").onsubmit = (event) => {
-          event.preventDefault();
+function mostrarFormularioRetirada(index) {
+ 
+  document.getElementById("secao-doacao").style.display = "none";
+  document.getElementById("secao-retirada").style.display = "block";
 
-          const nomeRetirada = document
-            .getElementById("nome-retirada")
-            .value.trim();
-          const cpfRetirada = document
-            .getElementById("cpf-retirada")
-            .value.trim();
-          const nascimentoRetirada = document
-            .getElementById("nascimento-retirada")
-            .value.trim();
-          const estadoRetirada =
-            document.getElementById("estado-retirada").value;
-          const sedeRetirada = document.getElementById("sede-retirada").value;
 
-          document.getElementById("nota-fiscal").classList.remove("hidden");
-          document.getElementById("detalhes-nota").innerHTML = `
+  const itemRetirado = itensDoacao[index];
+  document.getElementById("formulario-retirada").onsubmit = (event) => {
+    event.preventDefault();
+
+
+    const nomeRetirada = document.getElementById("nome-retirada").value.trim();
+    const cpfRetirada = document.getElementById("cpf-retirada").value.trim();
+    const nascimentoRetirada = document.getElementById("nascimento-retirada").value.trim();
+    const estadoRetirada = document.getElementById("estado-retirada").value;
+    const sedeRetirada = document.getElementById("sede-retirada").value;
+
+
+    if (nomeRetirada && cpfRetirada && nascimentoRetirada && estadoRetirada && sedeRetirada) {
+
+      const itemRetirado = itensDoacao.splice(index, 1)[0];
+
+
+      exibirDoacoes();
+
+
+      document.getElementById("nota-fiscal").classList.remove("hidden");
+      document.getElementById("detalhes-nota").innerHTML = `
         <p><strong>CPF:</strong> ${cpfRetirada}</p>
         <p><strong>Nome:</strong> ${nomeRetirada}</p>
         <p><strong>Data de Nascimento:</strong> ${nascimentoRetirada}</p>
         <p><strong>Estado:</strong> ${estadoRetirada}</p>
         <p><strong>Sede:</strong> ${sedeRetirada}</p>
+        <p><strong>Material Retirado:</strong> ${itemRetirado.nome}</p>
       `;
-        };
-      }
+    } else {
+      alert("Por favor, preencha todos os campos para concluir a retirada.");
+    }
+  };
+}
+
+function exibirDoacoes() {
+  const listaDoacoes = document.getElementById("lista-doacoes");
+  listaDoacoes.innerHTML = "";
+
+  itensDoacao.forEach((item, index) => {
+    const itemLista = document.createElement("li");
+    itemLista.textContent = `${item.nome} - ${item.descricao} - Região: ${item.regiao}`;
+
+    const botaoRetirar = document.createElement("button");
+    botaoRetirar.textContent = "Retirar";
+    botaoRetirar.addEventListener("click", () => mostrarFormularioRetirada(index));
+
+    itemLista.appendChild(botaoRetirar);
+    listaDoacoes.appendChild(itemLista);
+  });
+}
 
       document
         .getElementById("voltar-para-doacao")
