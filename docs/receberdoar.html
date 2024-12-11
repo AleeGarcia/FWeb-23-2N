@@ -230,23 +230,16 @@
         <form id="formulario-doacao">
           <label for="nome-item">Nome do Item:</label>
           <input type="text" id="nome-item" placeholder="Digite o nome do material" required />
-          
-          </select>
-
-          <label for="quantidade-item">Quantidade:</label>
-          <input type="number" id="quantidade-item" min="1" required />
-
+        
+          <label for="descricao-item">Descrição do Item:</label>
+          <input type="text" id="descricao-item" placeholder="Descreva o material" required />
+        
           <label for="regiao">Região:</label>
-          <input
-            type="text"
-            id="regiao"
-            placeholder="Ex: São Leopoldo"
-            required
-          />
-
-          
+          <input type="text" id="regiao" placeholder="Ex: São Leopoldo" required />
+        
           <button type="submit">Doar</button>
         </form>
+        
 
         <h3>Lista de Doações</h3>
         <ul id="lista-doacoes"></ul>
@@ -364,48 +357,43 @@
         document.getElementById("secao-doacao").style.display = "block";
       });
 
-      document
-        .getElementById("formulario-doacao")
-        .addEventListener("submit", (event) => {
-          event.preventDefault();
+      document.getElementById("formulario-doacao").addEventListener("submit", (event) => {
+  event.preventDefault();
 
-          const nomeItem = document.getElementById("nome-item").value.trim();
-          const quantidadeItem = document
-            .getElementById("quantidade-item")
-            .value.trim();
-          const regiao = document.getElementById("regiao").value.trim();
+  const nomeItem = document.getElementById("nome-item").value.trim();
+  const descricaoItem = document.getElementById("descricao-item").value.trim();
+  const regiao = document.getElementById("regiao").value.trim();
 
-          if (!nomeItem || !quantidadeItem || !regiao) {
-            alert("Por favor, preencha todos os campos.");
-            return;
-          }
+  if (!nomeItem || !descricaoItem || !regiao) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
 
-          const novoItem = {
-            nome: nomeItem,
-            quantidade: quantidadeItem,
-            regiao: regiao,
-          };
-          itensDoacao.push(novoItem);
-          exibirDoacoes();
+  const novoItem = {
+    nome: nomeItem,
+    descricao: descricaoItem,
+    regiao: regiao,
+  };
+  itensDoacao.push(novoItem);
+  exibirDoacoes();
 
-          event.target.reset();
-        });
+  event.target.reset();
+});
 
-      function exibirDoacoes() {
-        const listaDoacoes = document.getElementById("lista-doacoes");
-        listaDoacoes.innerHTML = "";
-        itensDoacao.forEach((item, index) => {
-          const itemLista = document.createElement("li");
-          itemLista.textContent = `${item.nome} - ${item.quantidade} unidade(s) - Região: ${item.regiao}`;
-          const botaoRetirar = document.createElement("button");
-          botaoRetirar.textContent = "Retirar";
-          botaoRetirar.addEventListener("click", () =>
-            mostrarFormularioRetirada(index)
-          );
-          itemLista.appendChild(botaoRetirar);
-          listaDoacoes.appendChild(itemLista);
-        });
-      }
+function exibirDoacoes() {
+  const listaDoacoes = document.getElementById("lista-doacoes");
+  listaDoacoes.innerHTML = "";
+  itensDoacao.forEach((item, index) => {
+    const itemLista = document.createElement("li");
+    itemLista.textContent = `${item.nome} - ${item.descricao} - Região: ${item.regiao}`;
+    const botaoRetirar = document.createElement("button");
+    botaoRetirar.textContent = "Retirar";
+    botaoRetirar.addEventListener("click", () => mostrarFormularioRetirada(index));
+    itemLista.appendChild(botaoRetirar);
+    listaDoacoes.appendChild(itemLista);
+  });
+}
+
 
       function mostrarFormularioRetirada(index) {
         document.getElementById("secao-doacao").style.display = "none";
