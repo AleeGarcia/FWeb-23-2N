@@ -312,7 +312,7 @@
 
         itensFiltrados.forEach((item, index) => {
           const itemLista = document.createElement("li");
-          itemLista.textContent = `${item.nome} - ${item.quantidade} unidade(s) - Região: ${item.regiao}`;
+          itemLista.textContent = `${item.nome} - ${item.descricao} descrição - Região: ${item.regiao}`;
           const botaoRetirar = document.createElement("button");
           botaoRetirar.textContent = "Retirar";
           botaoRetirar.addEventListener("click", () =>
